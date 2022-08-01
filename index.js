@@ -81,18 +81,7 @@ function render() {
         resetObjects();
     }
 
-    objectOptions.object === "circle" ? circleDrawF(
-        posX,
-        posY,
-        color,
-        scale
-    ) : drawRect(
-        posX,
-        posY,
-        scale,
-        scale,
-        color
-    );
+    objectOptions.object === "circle" ? circleDrawF(posX, posY, color, scale) : drawRect(posX, posY, scale, scale, color);
     myObject.radian += (Math.PI / 180) * selectedObject.speed;
     myObject.radius += selectedObject.movementRadius;
     requestAnimationFrame(render);
